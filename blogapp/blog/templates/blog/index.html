@@ -1,7 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block css_files%}
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+{% endblock%}
 
 {% block title%} Homepage {% endblock %}
 
 {% block content %}
 <h1>Homepage</h1>
+<img src="{% static 'img/1.png' %}" alt="" width="300px" height="150px">
 {% endblock %}
