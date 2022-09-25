@@ -8,6 +8,23 @@
 {% block title%} Homepage {% endblock %}
 
 {% block content %}
-<h1>Homepage</h1>
-<img src="{% static 'img/1.png' %}" alt="" width="300px" height="150px">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-3">
+                {% include 'partials/_categories.html' %}
+            </div>
+            <div class="col-9">
+                <h2>Homepage</h2>
+                <hr>
+                {% include 'blog/partials/_blog.html' %}
+                {% include 'blog/partials/_blog.html' %}
+                {% include 'blog/partials/_blog.html' %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block js_files %}
+    <script src="{% static 'blog/js/script.js'%}"></script>
 {% endblock %}
