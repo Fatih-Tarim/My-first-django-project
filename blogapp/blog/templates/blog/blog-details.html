@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title%} {{id}} Blog details {% endblock %}
 {% block content %}
 
@@ -8,10 +8,23 @@
         <div class="col-3">
             {% include 'partials/_categories.html' %}
         </div>
-        <div class="col-9">
-            <h2>Blog details: {{id}}</h2>
-            <hr>
-            {% include 'blog/partials/_blog.html' %}
+        <div class="col-9">    
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{% static 'img/'|add:blog.image %}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                               {{ blog.title }}
+                            </h5>
+                            <p class="card-text">{{ blog.description }}</p>
+                            <p class="card-text"><small class="text-muted">{{ blog.description }}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
         </div>
     </div>
 </div>
