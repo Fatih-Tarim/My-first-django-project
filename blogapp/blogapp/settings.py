@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -125,6 +126,9 @@ STATICFILES_DIRS = [
     'static/',
     BASE_DIR / "static"
 ]
+
+MEDIA_ROOT = BASE_DIR /"uploads"
+MEDIA_URL = "/images/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

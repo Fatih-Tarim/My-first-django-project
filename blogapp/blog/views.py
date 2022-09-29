@@ -22,7 +22,7 @@ def blogs(request):
     return render(request, "blog/blogs.html", context)
 
 
-def blog_details(request, id):
+def blog_details(request, slug):
     # blogs = data["blogs"]
     # selectedBlog = None
     # for blog in blogs:
@@ -32,8 +32,7 @@ def blog_details(request, id):
     # blogs = data["blogs"]
     # selectedBlog = [blog for blog in blogs if blog["id"]==id][0]
 
-    blog = Blog.objects.get(id=id)
-
+    blog = Blog.objects.get(slug=slug)
     return render(request, "blog/blog-details.html", {
         "blog": blog
     })
